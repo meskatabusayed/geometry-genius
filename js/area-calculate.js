@@ -33,7 +33,7 @@ function ParallelogramAreaCalculator(){
     const base = fieldInput('Parallelogram-base');
     const height = fieldInput('Parallelogram-height');
     const area = base * height;
-    console.log(area);
+    textByInnerText('Parallelogram-current-area' , area);
     
     
 }
@@ -43,5 +43,11 @@ function fieldInput(fieldId){
     const fieldValueString = field.value;
     const fieldValueNumber = parseFloat(fieldValueString);
     return fieldValueNumber;
+}
+
+function textByInnerText(areaId , area){
+    const innerValue = document.getElementById(areaId);
+    innerValue.innerText = area;
+
 }
 
